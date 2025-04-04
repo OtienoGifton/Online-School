@@ -81,10 +81,11 @@
     </div>
 
     <section class="form-container">
-      <form action="" method="post" enctype="multipart/form-data">
+      <form id="update-form" action="" enctype="multipart/form-data">
         <h3>Update Your Profile</h3>
         <p>Update Your Name*</p>
         <input
+          id="update-name"
           type="text"
           name="name"
           placeholder="Gifton Otieno"
@@ -94,6 +95,7 @@
         />
         <p>Update email*</p>
         <input
+          id="update-email"
           type="email"
           name="email"
           placeholder="otienogifton@gmail.com"
@@ -103,6 +105,7 @@
         />
         <p>Old Password*</p>
         <input
+          id="old-password"
           type="password"
           name="old_pass"
           placeholder="enter your old password"
@@ -112,6 +115,7 @@
         />
         <p>New Password*</p>
         <input
+          id="update-password"
           type="password"
           name="new_pass"
           placeholder="enter your new password"
@@ -120,15 +124,15 @@
         />
         <p>Confirm New Password</p>
         <input
+          id="confirm-newpassword"
           type="password"
           name="c_pass"
           placeholder="confirm your new password"
           maxlength="20"
           class="box"
         />
-        <p>Update Your Profile Picture</p>
-        <input type="file" accept="image/*" class="box" />
         <input
+          id="update-picture"
           type="submit"
           value="UPDATE YOUR PROFILE"
           name="submit"
@@ -143,6 +147,7 @@
     </footer>
 
     <!-- custom js file link  -->
-    <script src="script.js"></script>
+    <script src="script/main.js"></script>
+    <script src="script/update.js"></script>
   </body>
 </html>

@@ -225,7 +225,7 @@ section {
   height: 10rem;
   width: 10rem;
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: cover;
   margin-bottom: 1rem;
 }
 
@@ -519,6 +519,8 @@ section {
   color: var(--orange);
 }
 
+/* The courses section */
+
 .courses .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
@@ -592,6 +594,7 @@ section {
   margin-top: 2rem;
 }
 
+/* The playlist section of the page */
 .playlist-details .row {
   display: flex;
   align-items: flex-end;
@@ -865,6 +868,7 @@ section {
   margin-top: 2rem;
 }
 
+/* The comment section of the page */
 .comments .add-comment {
   background-color: var(--white);
   border-radius: 0.5rem;
@@ -947,6 +951,7 @@ section {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 
+/* The teachers section of the page */
 .teachers .search-tutor {
   margin-bottom: 2rem;
   border-radius: 0.5rem;
@@ -1086,6 +1091,7 @@ section {
   color: var(--main-color);
 }
 
+/* The profile section of the page */
 .user-profile .info {
   background-color: var(--white);
   border-radius: 0.5rem;
@@ -1158,6 +1164,7 @@ section {
   font-size: 1.7rem;
 }
 
+/* the contact section */
 .contact .row {
   display: flex;
   align-items: center;
@@ -1242,8 +1249,9 @@ section {
   color: var(--black);
 }
 
+/* the forms section of the page */
 .form-container {
-  min-height: calc(100vh - 20rem);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1272,6 +1280,11 @@ section {
 .form-container form p span {
   color: var(--red);
 }
+.form-container form p a {
+  color: var(--red);
+  font-weight: 700;
+  font-size: 2rem;
+}
 
 .form-container form .box {
   font-size: 1.8rem;
@@ -1283,6 +1296,7 @@ section {
   margin: 1rem 0;
 }
 
+/* the footer sewction of the page */
 .footer {
   background-color: var(--white);
   border-top: var(--border);
