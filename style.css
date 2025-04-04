@@ -255,8 +255,13 @@ section {
   height: 100vh;
   border-right: var(--border);
   z-index: 1200;
-}
 
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+}
+.side-bar ::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
 .side-bar #close-btn {
   text-align: right;
   padding: 2rem;
@@ -283,14 +288,6 @@ section {
 .side-bar .profile {
   padding: 3rem 2rem;
   text-align: center;
-}
-
-.side-bar .profile .image {
-  height: 10rem;
-  width: 10rem;
-  border-radius: 50%;
-  object-fit: contain;
-  margin-bottom: 1rem;
 }
 
 .side-bar .profile .name {
@@ -333,6 +330,53 @@ section {
 .side-bar.active {
   left: -30rem;
 }
+.side-bar .topics {
+  width: 90%;
+  padding: 2rem;
+  margin-inline: auto;
+}
+.side-bar .topics .topic {
+  line-height: 2;
+}
+.side-bar .topics .topic h1 {
+  text-align: start;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--black);
+  cursor: pointer;
+  user-select: none;
+}
+
+.side-bar .topics .topic p {
+  font-size: 2rem;
+}
+.topic-names {
+  max-height: 40vh;
+  overflow-y: auto;
+}
+.topic-names {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.topic.active .topic-names {
+  max-height: 40vh;
+  overflow: auto;
+  color: var(--main-color);
+}
+.topic.active .topic-names::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+.topic h1 span i {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
 /* This is the Home styles */
 .home-grid .box-container {
   display: grid;

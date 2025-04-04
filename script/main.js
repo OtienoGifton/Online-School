@@ -37,7 +37,7 @@ document.querySelector("#user-btn").onclick = () => {
 let search = document.querySelector(".header .flex .search-form");
 
 document.querySelector("#search-btn").onclick = () => {
-  search.classList.toggle("active");
+  search.classList.add("active");
   profile.classList.remove("active");
 };
 
@@ -58,7 +58,6 @@ window.onscroll = () => {
   search.classList.remove("active");
 
   if (window.innerWidth < 1200) {
-    sideBar.classList.remove("active");
     body.classList.remove("active");
   }
 };
@@ -78,4 +77,12 @@ document.addEventListener("DOMContentLoaded", function () {
   let savedPhoto = localStorage.getItem("studentPicture");
 
   popPhoto.src = savedPhoto;
+});
+
+//expand a topic When Clicked
+document.querySelectorAll(".topic h1").forEach((header) => {
+  header.addEventListener("click", () => {
+    const parent = header.parentElement;
+    parent.classList.toggle("active");
+  });
 });
